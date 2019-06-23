@@ -1,17 +1,25 @@
 package com.amer.moviecatalogservice.dal.model;
 
-public class CatalogItem {
+public class Movie {
 
+    private int id;
     private String name;
     private String description;
-    private int ratings;
 
-    public CatalogItem(){}
+    public Movie(){}
 
-    public CatalogItem(String name, String description, int ratings) {
+    public Movie(int id, String name, String description) {
+        this.id = id;
         this.name = name;
         this.description = description;
-        this.ratings = ratings;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -28,13 +36,5 @@ public class CatalogItem {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public int getRatings() {
-        return ratings;
-    }
-
-    public void setRatings(int ratings) {
-        this.ratings = ratings;
     }
 }
